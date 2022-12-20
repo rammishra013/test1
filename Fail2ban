@@ -1,0 +1,15 @@
+How To Protect SSH with Fail2Ban
+ 
+Install Fail2ban on Ubuntu
+sudo apt-get update
+sudo apt-get install fail2ban sendmail
+sudo systemctl start fail2ban
+sudo systemctl status fail2ban
+ufw allow ssh
+ufw enable
+
+
+configuration---
+sudo cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
+sudo vi /etc/fail2ban/jail.com
+
